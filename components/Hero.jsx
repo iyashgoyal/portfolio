@@ -23,7 +23,7 @@ const Hero = () => {
                   <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
                      Web Developer
                   </div>
-                  <h1 className="h1 mb-4 w-[120%]">Hello, my name is Yash Goyal</h1>
+                  <h1 className="h1 mb-4 w-[100%] lg:w-[120%] ">Hello, my name is Yash Goyal</h1>
                   <p className="subtitle  max-w-[490px] mx-auto lg:mx-0">
                      I am Aspiring Full Stack Developer and Python Enthusiast This is a brief description wilh insights into myself, my vocational
                      journey, and what I engage in professionally.

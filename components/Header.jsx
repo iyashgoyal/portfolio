@@ -34,14 +34,16 @@ const Header = () => {
          <div className="container mx-auto">
             <div className="flex items-center justify-center">
                
-               <div className="flex items-center gap-x-6">
+               <div className=" flex space-x-28 lg:flex items-center gap-x-6">
                   {/* Nav */}
                   <Nav
                      containerStyles="hidden lg:flex gap-x-8 items-center"
                      linkStyles="relative hover:text-primary transition-all"
                      underlineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
                   />
+                  
                   <ThemeToggler />
+                  
                   {/* Mobile nav */}
                   <div className="lg:hidden">
                      <MobileNav />

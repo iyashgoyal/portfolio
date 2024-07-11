@@ -8,7 +8,7 @@ const ThemeToggler = () => {
    const { theme, setTheme } = useTheme();
 
    return (
-      <div>
+      <div >
          <Button
             variant="outline"
             size="icon"

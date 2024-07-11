@@ -22,12 +22,12 @@ const infoData = [
     text: "+91 7428911176",
   },
   {
-    icon: <MailIcon size={20} />,
-    text: "work.yashgoyal@gmail.com",
-  },
-  {
     icon: <Calendar size={20} />,
     text: "Born on 04 Sep,2003",
+  },
+  {
+    icon: <MailIcon size={20} />,
+    text: "work.yashgoyal@gmail.com",
   },
   {
     icon: <GraduationCap size={20} />,
@@ -98,7 +98,7 @@ const About = () => {
 
   return (
     <section className="lg:h-[860px] pb-12 lg:py-24">
-      <div className="container mx-auto">
+      <div className="container ">
         <h2 className="section-title mb-8 lg:mb-16 text-center mx-auto ">
           About Me
         </h2>
@@ -119,7 +119,8 @@ const About = () => {
                 </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] lg:w-auto"
-                  value="qualifications">
+                  value="qualifications"
+                >
                   Qualifications
                 </TabsTrigger>
                 <TabsTrigger className="w-[162px] lg:w-auto" value="skills">
@@ -127,26 +128,28 @@ const About = () => {
                 </TabsTrigger>
               </TabsList>
               {/* tabs content */}
-              <div className="text-lg mt-12 lg:mt-8 w-[137%]">
+              <div className="text-lg mt-12 w-[100%] lg:mt-8 w-[137%]">
                 {/* personal */}
                 <TabsContent value="personal">
-                  <div className=" text-center lg:text-left">
+                  <div className=" text-center lg:">
                     <h3 className="h3 mb-4">
-                    Passionate about building innovative web applications and solving complex problems with code
+                      Passionate about building innovative web applications and
+                      solving complex problems with code
                     </h3>
-                    <p className="subtitle max-w-xl mx-auto">
-                    I specialize in crafting intuitive websites with MERN and Python.
-                    delivering dynamic and engaging user experiences.
+                    <p className="subtitle max-w-screen ">
+                      I specialize in crafting intuitive websites with MERN and
+                      Python. delivering dynamic and engaging user experiences.
                     </p>
                     {/* icons */}
-                    <div className="grid lg:grid-cols-2 gap-4 mb-12">
+                    <div className="grid lg:grid-cols-2 gap-6 gap-x-14 mb-12">
                       {infoData.map((item, index) => {
                         return (
                           <div
                             className="flex items-center gap-x-4 mx-auto lg:mx-0"
-                            key={index}>
+                            key={index}
+                          >
                             <div className="text-primary ">{item.icon}</div>
-                            <div>{item.text}</div>
+                            <div className="lg:min-w-[120%]">{item.text}</div>
                           </div>
                         );
                       })}
@@ -212,9 +215,7 @@ const About = () => {
                     <h3 className="h3 mb-8">Things i use everyday</h3>
                     {/* skills */}
                     <div className="mb-16">
-                      <h4 className="text-xl font-semibold mb-2">
-                        Skills
-                      </h4>
+                      <h4 className="text-xl font-semibold mb-2">Skills</h4>
                       <div className="border-b border-border mb-4"></div>
                       {/* skills list */}
                       <div>
@@ -225,8 +226,12 @@ const About = () => {
                             return (
                               <div
                                 className="w-2/4 text-center lg:text-left mx-auto lg:mx-0"
-                                key={index}>
-                                <span className="capitalize font-bold">{head}</span><br></br>
+                                key={index}
+                              >
+                                <span className="capitalize font-bold">
+                                  {head}
+                                </span>
+                                <br></br>
                                 <span className="font-medium ">{name}</span>
                               </div>
                             );
