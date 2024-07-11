@@ -128,10 +128,10 @@ const About = () => {
                 </TabsTrigger>
               </TabsList>
               {/* tabs content */}
-              <div className="text-lg mt-12 w-[100%] lg:mt-8 w-[137%]">
+              <div className="text-lg mt-12 w-[100%] lg:mt-8 lg:w-[125%]">
                 {/* personal */}
                 <TabsContent value="personal">
-                  <div className=" text-center lg:">
+                  <div className=" text-center ">
                     <h3 className="h3 mb-4">
                       Passionate about building innovative web applications and
                       solving complex problems with code
@@ -149,7 +149,7 @@ const About = () => {
                             key={index}
                           >
                             <div className="text-primary ">{item.icon}</div>
-                            <div className="lg:min-w-[120%]">{item.text}</div>
+                            <div className="lg:min-w-[120%] text-left ">{item.text}</div>
                           </div>
                         );
                       })}
