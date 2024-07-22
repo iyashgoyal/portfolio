@@ -50,7 +50,7 @@ const qualificationsData = [
       },
       {
         university: "Sun Valley International School (CBSE)",
-        qualification: "XII",
+        qualification: "XII (PCM)",
         years: "2021",
       },
       {
