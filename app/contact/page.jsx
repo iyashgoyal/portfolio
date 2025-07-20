@@ -8,7 +8,7 @@ const Contact = () => {
         {/* texto e ilustracion */}
         <div className="grid lg:grid-cols-2 pt-12 lg:h-[480px] mb-6 lg:mb-24">
           {/* texto */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center items-center">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
               <span className="w-[30px] h-[2px] bg-primary"></span>
               Hello Developer 👋
@@ -24,7 +24,7 @@ const Contact = () => {
         {/* info texto y formulario */}
         <div className="grid lg:grid-cols-2 mb-24 lg:mb-32">
           {/* info texto */}
-          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-12 lg:mb-24 text-base lg:text-lg">
+          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-12 lg:mb-24 text-base lg:text-lg" style="padding-left: 150px;">
             {/* mail */}
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className="text-primary" />
