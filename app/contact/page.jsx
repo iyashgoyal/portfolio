@@ -40,8 +40,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-sm mx-auto">
+          <div className="flex justify-center w-full">
+            <div className="max-w-sm w-full flex justify-center">
               <Form />
             </div>
           </div>
