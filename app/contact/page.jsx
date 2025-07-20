@@ -4,7 +4,7 @@ import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 const Contact = () => {
   return (
     <section>
-      <div className="containe mx-auto">
+      <div className="container mx-auto px-4">
         {/* texto e ilustracion */}
         <div className="grid lg:grid-cols-2 pt-12 lg:h-[480px] mb-6 lg:mb-24">
           {/* texto */}
@@ -22,7 +22,7 @@ const Contact = () => {
           <div className="hidden lg:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>
         </div>
         {/* info texto y formulario */}
-        <div className="grid lg:grid-cols-2 mb-24 lg:mb-32">
+        <div className="grid lg:grid-cols-2 mb-24 lg:mb-32 items-start">
           {/* info texto */}
           <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-12 lg:mb-24 text-base lg:text-lg pl-[50px] lg:pl-[150px]">
             {/* mail */}
