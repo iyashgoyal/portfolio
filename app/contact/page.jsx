@@ -22,9 +22,9 @@ const Contact = () => {
           <div className="hidden lg:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>
         </div>
         {/* info texto y formulario */}
-        <div className="grid lg:grid-cols-2 mb-24 lg:mb-32 items-start w-full">
+        <div className="grid lg:grid-cols-2 mb-24 lg:mb-32 items-center w-full gap-y-8">
           {/* info texto */}
-          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-12 lg:mb-24 text-base lg:text-lg px-4 lg:pl-[150px]">
+          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-6 lg:mb-24 text-base lg:text-lg items-center lg:items-start px-4 lg:pl-[150px]">
             {/* mail */}
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className="text-primary" />
@@ -41,7 +41,11 @@ const Contact = () => {
               <div>+91 7428911176</div>
             </div>
           </div>
-          <Form />
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-md">
+              <Form />
+            </div>
+          </div>
         </div>
       </div>
     </section>
