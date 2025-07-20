@@ -39,7 +39,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={sendMail} className="flex flex-col gap-y-4">
+    <form onSubmit={sendMail} className="flex flex-col gap-y-4 items-center">
       {/* input */}
       <div className="relative flex items-center w-4/5 sm:w-full">
         <Input

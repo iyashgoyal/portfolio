@@ -8,7 +8,7 @@ const Contact = () => {
         {/* texto e ilustracion */}
         <div className="grid lg:grid-cols-2 pt-12 lg:h-[480px] mb-6 lg:mb-24 w-full">
           {/* texto */}
-          <div className="flex flex-col justify-center items-center lg:items-start px-4 lg:pl-[150px]">
+          <div className="flex flex-col justify-center items-center lg:items-start px-4 lg:pl-[135px]">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
               <span className="w-[30px] h-[2px] bg-primary"></span>
               Hello Developer 👋
