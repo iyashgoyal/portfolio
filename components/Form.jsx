@@ -41,7 +41,7 @@ const Form = () => {
   return (
     <form onSubmit={sendMail} className="flex flex-col gap-y-4">
       {/* input */}
-      <div className="relative flex items-center">
+      <div className="relative flex items-center w-4/5 sm:w-full">
         <Input
           type="name"
           id="name"
@@ -55,7 +55,7 @@ const Form = () => {
         <User className="absolute right-6" size={20} />
       </div>
       {/* input */}
-      <div className="relative flex items-center">
+      <div className="relative flex items-center w-4/5 sm:w-full">
         <Input
           type="email"
           id="email"
@@ -69,7 +69,7 @@ const Form = () => {
         <MailIcon className="absolute right-6" size={20} />
       </div>
       {/* textarea */}
-      <div className="relative flex items-center">
+      <div className="relative flex items-center w-4/5 sm:w-full">
         <Textarea
           name="message"
           id="message"
