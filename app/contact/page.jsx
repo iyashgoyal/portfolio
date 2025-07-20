@@ -24,7 +24,7 @@ const Contact = () => {
         {/* info texto y formulario */}
         <div className="grid lg:grid-cols-2 mb-24 lg:mb-32">
           {/* info texto */}
-          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-12 lg:mb-24 text-base lg:text-lg" style="padding-left: 150px;">
+          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-12 lg:mb-24 text-base lg:text-lg pl-[150px]">
             {/* mail */}
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className="text-primary" />
