@@ -22,27 +22,26 @@ const Contact = () => {
           <div className="hidden lg:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>
         </div>
         {/* info texto y formulario */}
-        <div className="grid lg:grid-cols-2 mb-24 lg:mb-32 items-center w-full gap-y-8">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 mb-24 lg:mb-32 items-center w-full gap-y-8">
           {/* info texto */}
-          <div className="flex flex-col gap-y-4 lg:gap-y-14 mb-6 lg:mb-24 text-base lg:text-lg items-center lg:items-start px-4 lg:pl-[150px]">
-            {/* mail */}
-            <div className="flex items-center gap-x-8">
-              <MailIcon size={18} className="text-primary" />
-              <div>work.yashgoyal@gmail.com</div>
-            </div>
-            {/* direccion */}
-            <div className="flex items-center gap-x-8">
-              <HomeIcon size={18} className="text-primary" />
-              <div>Uttar Pradesh, India</div>
-            </div>
-            {/* teléfono */}
-            <div className="flex items-center gap-x-8">
-              <PhoneCall size={18} className="text-primary" />
-              <div>+91 7428911176</div>
+          <div className="flex flex-col gap-y-4 mb-6 lg:mb-24 text-base lg:text-lg items-center w-full">
+            <div className="flex flex-col items-center w-full max-w-xs mx-auto">
+              <div className="flex items-center justify-center gap-x-2 mb-2">
+                <MailIcon size={18} className="text-primary" />
+                <span>work.yashgoyal@gmail.com</span>
+              </div>
+              <div className="flex items-center justify-center gap-x-2 mb-2">
+                <HomeIcon size={18} className="text-primary" />
+                <span>Uttar Pradesh, India</span>
+              </div>
+              <div className="flex items-center justify-center gap-x-2">
+                <PhoneCall size={18} className="text-primary" />
+                <span>+91 7428911176</span>
+              </div>
             </div>
           </div>
           <div className="w-full flex justify-center">
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-sm mx-auto">
               <Form />
             </div>
           </div>
