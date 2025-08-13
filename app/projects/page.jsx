@@ -14,6 +14,15 @@ const projectsData = [
     github: "https://github.com/iyashgoyal/Formzy---An-Ai-enabled-Form-Builder",
   },
   {
+    image: "/work/wandrivo.png",
+    category: "Fullstack",
+    name: "Wandrivo",
+    description:
+      "A modern, responsive travel agency website built with React, Express.js, and TypeScript.",
+    link: "https://wandrivo.com/",
+    github: "https://github.com/iyashgoyal/WandriveTravel",
+  },
+  {
     image: "/work/passkeeper.png",
     category: "Fullstack",
     name: "Passkeeper",

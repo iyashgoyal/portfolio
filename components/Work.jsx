@@ -8,9 +8,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 //import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation, Mousewheel } from "swiper/modules";
 
 // components
 import ProjectCard from "./ProjectCard";
@@ -24,6 +25,15 @@ const projectsData = [
       "An Ai enabled form builder using  Next.js 14, React, Tailwind CSS, Postgresql, Shad cn/ui , Stripe, Clerk.",
     link: "https://formzy.vercel.app/",
     github: "https://github.com/iyashgoyal/Formzy---An-Ai-enabled-Form-Builder",
+  },
+  {
+    image: "/work/wandrivo.png",
+    category: "Fullstack",
+    name: "Wandrivo",
+    description:
+      "A modern, responsive travel agency website built with React, Express.js, and TypeScript.",
+    link: "https://wandrivo.com/",
+    github: "https://github.com/iyashgoyal/WandriveTravel",
   },
   {
     image: "/work/passkeeper.png",
@@ -56,43 +66,61 @@ const projectsData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 lg:mb-48">
-      <div className=" flex flex-col lg:container mx-auto">
-        {/* text */}
-        <div className="max-w-[400px] mx-auto lg:mx-0 text-center lg:text-left mb-12 lg:h-[400px] flex flex-col justify-center items-center lg:items-start">
-          <h2 className="section-title mb-4">Latest Projects</h2>
-          <p className="subtitle mb-8">
-            These are some of my latest projects
-          </p>
-          <Link href="/projects">
-            <Button>All Projects</Button>
-          </Link>
+    <>
+      <style jsx>{`
+        :global(.swiper-button-next),
+        :global(.swiper-button-prev) {
+          color: #f97316 !important;
+        }
+        :global(.swiper-button-next:hover),
+        :global(.swiper-button-prev:hover) {
+          color: #ea580c !important;
+        }
+      `}</style>
+      <section className="relative mb-12 lg:mb-48">
+        <div className=" flex flex-col lg:container mx-auto">
+          {/* text */}
+          <div className="max-w-[400px] mx-auto lg:mx-0 text-center lg:text-left mb-12 lg:h-[400px] flex flex-col justify-center items-center lg:items-start">
+            <h2 className="section-title mb-4">Latest Projects</h2>
+            <p className="subtitle mb-8">
+              These are some of my latest projects
+            </p>
+            <Link href="/projects">
+              <Button>All Projects</Button>
+            </Link>
+          </div>
+          {/* slider */}
+          <div className=" max-w-[335px] mx-auto relative lg:max-w-[800px] lg:absolute lg:right-0 lg:top-0">
+            <Swiper
+              className="h-[480px]"
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+              }}
+              spaceBetween={30}
+              modules={[Pagination, Navigation, Mousewheel]}
+              pagination={{ clickable: true }}
+              navigation={true}
+              mousewheel={{
+                forceToAxis: true,
+                sensitivity: 1,
+                releaseOnEdges: true,
+              }}>
+              {/* mostrar solo los primero 4 proyectos en el slider */}
+              {projectsData.slice(0, 4).map((project, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <ProjectCard project={project} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
-        {/* slider */}
-        <div className=" max-w-[335px] mx-auto relative lg:max-w-[800px] lg:absolute lg:right-0 lg:top-0">
-          <Swiper
-            className="h-[480px]"
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-            }}
-            spaceBetween={30}
-            modules={[Pagination]}
-            pagination={{ clickable: true }}>
-            {/* mostrar solo los primero 4 proyectos en el slider */}
-            {projectsData.slice(0, 4).map((project, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <ProjectCard project={project} />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
